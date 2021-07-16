@@ -7,7 +7,7 @@ using System.Web.Mvc;
 using WakenBake.DAL;
 using WakenBake.DAL.Repository;
 using WakenBake.Models;
-
+//admin sample
 namespace WakenBake.Controllers
 {
     public class AdminController : Controller
