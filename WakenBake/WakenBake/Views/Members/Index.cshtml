@@ -1,0 +1,90 @@
+﻿@model IEnumerable<WakenBake.DAL.Tbl_Members>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Index</h2>
+<div class="mt-1 mb-5 pt-5">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="~/Admin/Dashboard" class="text-decoration-none font-weight-bold text-success">Dashborad <i class="fas fa-chart-line"> </i> </a> </li>
+
+            <li class="breadcrumb-item active font-weight-bold" aria-current="page">Users <i class="fas fa-users"> </i></li>
+        </ol>
+    </nav>
+
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FristName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.EmailId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Password)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsActive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsDelete)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CreatedOn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ModifiedOn)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FristName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.EmailId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Password)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsActive)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IsDelete)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CreatedOn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ModifiedOn)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MemberId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MemberId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MemberId })
+                <td>
+                    @*@Html.ActionLink("Edit", "Edit", new { id=item.MemberId })*@
+                    @Html.ActionLink("Delete", "Delete", "Members", new { id = item.MemberId }, new { @class = "btn btn-dark" })
+                </td>
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

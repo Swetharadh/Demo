@@ -1,0 +1,242 @@
+﻿@*@model WakenBake.Models.Home.HomeIndexViewModel*@
+    @model dynamic
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div id="themeSlider" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#themeSlider" data-slide-to="0" class="active"></li>
+        <li data-target="#themeSlider" data-slide-to="1"></li>
+        <li data-target="#themeSlider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <div class="imgOverlay"></div>
+            <img style="height:320px;width:100%" src="~/Content/images/cake1.jpg" alt="First slide">
+            <div class="carousel-caption">
+                <h3>LAYERED WITH LOVE!!</h3>
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="imgOverlay"></div>
+            <img style="height:320px;width:100%" src="~/Content/images/cookiee2.jpg" alt="Second slide">
+            <div class="carousel-caption">
+                <h3>CRISY BITES !!</h3>
+
+            </div>
+        </div>
+        <div class="item">
+            <div class="imgOverlay"></div>
+            <img style="height:320px;width:100%" src="~/Content/images/pie1.jpg" alt="Third slide">
+            <div class="carousel-caption">
+                <h3>STRESSED??BE HAPPY WITH PIE!!</h3>
+
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#themeSlider" data-slide="prev">
+        <span class="fa fa-chevron-left"></span>
+    </a>
+    <a class="right carousel-control" href="#themeSlider" data-slide="next">
+        <span class="fa fa-chevron-right"></span>
+    </a>
+
+</div><br />
+<br />
+      
+      @*<html>
+      <body style="background-color:aliceblue;">         
+          <p style="text-align:center;font-style:italic;font-size:unset">
+              Attention Customers!<br /><span>We are accepting WALK IN and CURBSIDE orders at QUACKS on 43rd Street, Captain Quacks AND Lady Quacks.</span> 
+              We are still accepting custom CAKE and COOKIE orders for FRI-SUN pickup only at Quacks 43rd. Please email Decorators@QuacksBakery.com place an order for CUSTOM cake/cookie. All other orders should be called into Quacks 43rd Street Bakery at the number provided below. Thank you for your patronage during these crazy crazy times.
+          </p>
+
+      </body>
+      </html>*@
+@*<div class="olContent f1"><h2 style="color:black">Search Product/Category</h2></div>
+<div class="olSearch fr">
+    <input type="text" placeholder="Enter Keyword" name="searchKey" class="inputComn houseText form-control" />
+    <div class="searchIcon">
+        <button type="button" class="searchBtn">
+            <img src="~/Content/images/SearchIcon.png"width="50" height="30" />
+        </button>
+    </div>
+</div>*@
+
+    @*<div class="row">
+        <div class="col-md-12">
+            <div class="page-header">
+                <h2>Baker Table </h2>
+            </div>
+        </div>
+    </div>*@
+
+    <!--<div class="row product-container">
+
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/Content/images/cake3.jpg" />
+
+                <div class="caption">
+                    <h5>Vanilla Mango Delight</h5>
+                    <p>500.00 INR /kg.</p>
+                    <p>Available</p>
+                    <div class="product-item-badge">New</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/Content/images/cookiee1.jpg" />
+
+                <div class="caption">
+                    <h5>Choco Chip Cookie</h5>
+                    <p>350.00 INR /kg.</p>
+                    <p>Available</p>
+                    <div class="product-item-badge">New</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/Content/images/pie4.jpg" />
+
+                <div class="caption">
+                    <h5>Pumpkin Pie</h5>
+                    <p>400.00 INR /kg.</p>
+                    <p>Available</p>
+                    <div class="product-item-badge">Old</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"
+                     src="~/Content/images/cake4.jpeg" />
+
+                <div class="caption">
+                    <h5>Black Forest</h5>
+                    <p>450.00 INR /kg.</p>
+                    <p>Available</p>
+                    <div class="product-item-badge">New</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%" src="~/Content/images/butterscotch cake.jpg" />
+
+                <div class="caption">
+                    <h5>Butterscotch Cake</h5>
+                    <p>450.00 INR /kg.</p>
+                    <p>Available</p>-->
+                    @*<div class="product-item-badge">New</div>*@
+                <!--</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%" src="~/Content/images/cookiee4.jpg" />
+
+
+                <div class="caption">
+                    <h5>Danish Cookies</h5>
+                    <p>500.00 INR /kg.</p>
+                    <p>Available</p>-->
+                    @*<div class="product-item-badge">New</div>*@
+                <!--</div>
+            </div>
+        </div>
+
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%" src="~/Content/images/pie3.jpg" />
+
+
+                <div class="caption">
+                    <h5>Apple Pie</h5>
+                    <p>250.00 INR /kg.</p>
+                    <p>Available</p>-->
+                    @*<div class="product-item-badge">New</div>*@
+                <!--</div>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+            <div class="thumbnail product-item" style="height:300px">
+
+                <img class="img-responsive" title="Click to View Product detail"
+                     style="cursor:pointer;height:160px;width:100%"  src="~/Content/images/Double crust pie.jpg" />
+
+
+                <div class="caption">
+                    <h5>Double Crust Fruit Pie</h5>
+                    <p>750.00 INR /kg.</p>
+                    <p>Available</p>-->
+                    @*<div class="product-item-badge">New</div>*@
+                <!--</div>
+            </div>
+        </div>
+    </div>-->
+
+@*<div class="container-fluid" style="width:95%">
+    
+  
+    <div class="row">
+
+        @foreach (var item in Model.PRODUCTS)
+        {
+            if (item.IsFeatured == true)
+            {
+                <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+                    <div class="thumbnail product-item" style="height:300px">
+
+                        <img class="img-responsive" title="Click to View Product detail"
+                             style="cursor:pointer;height:160px;width:100%" src="~/ProductImage/@item.ProductImage" />
+
+
+                        <div class="caption">
+                            <h5>@item.ProductName</h5>
+                            <p>INR @item.Price per 500grams</p>
+                            <p>Available</p>
+                            <p>
+                                @if (item.Quantity > 0)
+                                {
+                                    using (Html.BeginForm("AddToCart", "Home", new { ProductId = item.ProductId,url="Index" }, FormMethod.Post))
+                                    {
+                                        <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                                    }
+                                }
+                                    </p>
+                                </div>
+                    </div>
+                </div>
+            }
+        }
+
+         
+            </div>
+        </div>*@
+       

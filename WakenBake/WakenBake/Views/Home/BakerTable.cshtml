@@ -1,0 +1,161 @@
+﻿@model dynamic
+@{
+    ViewBag.Title = "BakerTable";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>BakerTable</h2>
+<div class="olContent f1"><h2 style="color:black">Search Product/Category</h2></div>
+<form method="post">
+    <div class="olSearch fr">
+        <input type="text" name="search" placeholder="Enter Keyword" class="inputComn form-control" />
+        <div class="searchIcon">
+            <button type="submit" class="searchBtn">
+                <img src="~/Content/images/SearchIcon.png" width="50" height="30"/>
+                           </button>
+        </div>
+    </div>
+</form>*@
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="page-header">
+            <h2>BAKER'S TABLE <small>HAVE A LICKY BITES</small></h2>
+        </div>
+    </div>
+
+
+    <div class="container-fluid" style="width:95%">
+
+
+        <div class="row">
+
+            @foreach (var item in Model.PRODUCTS)
+            {
+                
+               
+                    if (item.IsFeatured == true)
+                    {
+                    <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+                        <div class="thumbnail product-item" style="height:300px">
+
+                            <img class="img-responsive" title="Click to View Product detail"
+                                 style="cursor:pointer;height:160px;width:100%" src="~/ProductImage/@item.ProductImage" />
+
+
+                            <div class="caption">
+                                <h5>@item.ProductName</h5>
+                                <p>INR @item.Price </p>
+                                <p>Available</p>
+                                <p>
+                                    @if (item.Quantity > 0)
+                                    {
+                                        using (Html.BeginForm("AddToCart", "Home", new { ProductId = item.ProductId, url = "Index" }, FormMethod.Post))
+                                        {
+                                            <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                                        }
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                
+            }
+
+
+        </div>
+    </div>
+    @*cookie*@
+    <!--<h1>Cookie</h1>
+    <div class="container-fluid" style="width:95%">
+
+
+        <div class="row">
+
+            @foreach (var item in Model.PRODUCTS)
+            {
+                if (item.CategoryId == 2)
+                {
+
+
+                    if (item.IsFeatured == true)
+                    {
+                    <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+                        <div class="thumbnail product-item" style="height:300px">
+
+                            <img class="img-responsive" title="Click to View Product detail"
+                                 style="cursor:pointer;height:160px;width:100%" src="~/ProductImage/@item.ProductImage" />
+
+
+                            <div class="caption">
+                                <h5>@item.ProductName</h5>
+                                <p>INR @item.Price per kg</p>
+                                <p>Available</p>
+                                <p>
+                                    @if (item.Quantity > 0)
+                                    {
+                                        using (Html.BeginForm("AddToCart", "Home", new { ProductId = item.ProductId, url = "Index" }, FormMethod.Post))
+                                        {
+                                            <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                                        }
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                }
+            }
+
+
+        </div>
+    </div>-->
+
+    @*Pie*@
+    <!--<h1>PIE</h1>
+    <div class="container-fluid" style="width:95%">
+
+
+        <div class="row">
+
+            @foreach (var item in Model.PRODUCTS)
+            {
+                if (item.CategoryId == 3)
+                {
+
+
+                    if (item.IsFeatured == true)
+                    {
+                    <div class="col-md-3 col-sm-3 col-xs-6" style="margin-bottom:8px">
+                        <div class="thumbnail product-item" style="height:300px">
+
+                            <img class="img-responsive" title="Click to View Product detail"
+                                 style="cursor:pointer;height:160px;width:100%" src="~/ProductImage/@item.ProductImage" />
+
+
+                            <div class="caption">
+                                <h5>@item.ProductName</h5>
+                                <p>INR @item.Price per kg</p>
+                                <p>Available</p>
+                                <p>
+                                    @if (item.Quantity > 0)
+                                    {
+                                        using (Html.BeginForm("AddToCart", "Home", new { ProductId = item.ProductId, url = "Index" }, FormMethod.Post))
+                                        {
+                                            <button type="submit" class="pull-right"><i class="fa fa-shopping-cart"></i></button>
+                                        }
+                                    }
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    }
+                }
+            }
+
+
+        </div>
+    </div>-->
+
+</div>

@@ -1,0 +1,122 @@
+﻿@model IEnumerable<WakenBake.DAL.Tbl_Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<html>
+<head>
+    <style>
+        table, th, td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+</html>
+
+<h2>Index</h2>
+@*<div class="pt-5 pb-5">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="~/Admin/Dashboard" class="text-decoration-none font-weight-bold text-success">Dashborad <i class="fas fa-chart-line"> </i> </a> </li>
+
+            <li class="breadcrumb-item active font-weight-bold" aria-current="page">Product List</li>
+        </ol>
+    </nav>
+    <br />
+    <div class="jumbotron bg-light m-auto shadow" style="width:95%;">*@
+
+        <p>
+            @Html.ActionLink("Create New", "Create", new { @class = "btn btn-outline-success" })
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsActive)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsDelete)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CreatedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ModifiedDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ProductImage)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IsFeatured)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Quantity)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Price)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tbl_Category.CategoryName)
+                </th>
+                @*<th>
+                    @Html.DisplayNameFor(model => model.Tbl_Category1.CategoryName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Tbl_Category2.CategoryName)
+                </th>*@
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsActive)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsDelete)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedDate)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ModifiedDate)
+                    </td>
+                    <td>
+                        <img src="~/ProductImage/@item.ProductImage" alt="Not found" width="80" height="80" />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsFeatured)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Quantity)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tbl_Category.CategoryName)
+                    </td>
+                    @*<td>
+                        @Html.DisplayFor(modelItem => item.Tbl_Category1.CategoryName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Tbl_Category2.CategoryName)
+                    </td>*@
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ProductId }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.ProductId }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ProductId })
+                    </td>
+                </tr>
+            }
+
+        </table>
+   
